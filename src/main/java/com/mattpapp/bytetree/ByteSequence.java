@@ -11,10 +11,6 @@ public final class ByteSequence implements Comparable<ByteSequence> {
     this.data = Arrays.copyOf(src, src.length);
   }
 
-  public byte[] toByteArray() {
-    return Arrays.copyOf(data, data.length);
-  }
-
   @Override
   public int compareTo(ByteSequence o) {
     byte[] a = this.data;
@@ -31,8 +27,7 @@ public final class ByteSequence implements Comparable<ByteSequence> {
   @Override
   public boolean equals(Object obj) {
     if (this == obj) return true;
-    if (!(obj instanceof ByteSequence)) return false;
-    ByteSequence other = (ByteSequence) obj;
+    if (!(obj instanceof ByteSequence other)) return false;
     return Arrays.equals(this.data, other.data);
   }
 
